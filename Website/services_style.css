@@ -1,0 +1,24 @@
+#container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333333;
+  }
+  
+  .service {
+    margin: 20px 0;
+  }
+  
+  h2 {
+    color: #555555;
+  }
+  
+  p {
+    line-height: 1.5;
+    text-align: justify;
+    color: #777777;
+  }
+  

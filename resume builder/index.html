@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume Generator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body>
+
+    <div id="animated-text">Welcome to my website!</div>
+
+    <form id="resume-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="job-title">Job Title:</label>
+      <input type="text" id="job-title" name="job-title">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone">
+
+      <label for="summary">Summary:</label>
+      <textarea id="summary" name="summary"></textarea>
+
+      <label for="education">Education:</label>
+      <div id="education"></div>
+      <button type="button" id="add-education">Add Education</button>
+
+      <label for="work-experience">Work Experience:</label>
+      <div id="work-experience"></div>
+      <button type="button" id="add-work-experience">Add Work Experience</button>
+
+      <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume"></div>
+  </body>
+</html>
