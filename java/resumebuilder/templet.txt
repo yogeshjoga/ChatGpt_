@@ -1,0 +1,39 @@
+create resume templets in java
+Creating resume templates in Java can be done using a template engine such as Apache Velocity or Freemarker. These template engines allow you to create reusable templates that can be populated with data at runtime. Here's an example of how you could create a resume template using Apache Velocity:
+
+Create a new file called resume.vm in the resources folder of your project.
+In the resume.vm file, create a template using the Velocity Template Language (VTL). VTL allows you to use variables and control structures to create a dynamic template. Here's an example of a basic template that displays a person's name, contact information, education, and work experience:
+Copy code
+<h1>$name</h1>
+<p>$email | $phone | $address</p>
+<h2>Education</h2>
+<ul>
+#foreach($education in $educations)
+    <li>$education.degree in $education.major at $education.university ($education.graduationYear)</li>
+#end
+</ul>
+<h2>Work Experience</h2>
+<ul>
+#foreach($workExperience in $workExperiences)
+    <li>$workExperience.position at $workExperience.company ($workExperience.startDate - $workExperience.endDate)</li>
+#end
+</ul>
+In your Java code, you can use the VelocityEngine class to load the template and populate it with data. Here's an example of how you could do that:
+Copy code
+VelocityEngine velocityEngine = new VelocityEngine();
+velocityEngine.init();
+
+Template template = velocityEngine.getTemplate("resume.vm");
+
+VelocityContext context = new VelocityContext();
+context.put("name", "John Doe");
+context.put("email", "johndoe@example.com");
+context.put("phone", "555-555-5555");
+context.put("address", "123 Main St, Anytown USA 12345");
+context.put("educations", educations);
+context.put("workExperiences", workExperiences);
+
+StringWriter writer = new StringWriter();
+template.mer
+
+
